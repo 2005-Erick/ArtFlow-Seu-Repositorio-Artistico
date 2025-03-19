@@ -11,27 +11,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div id="logotipo">
-                <img src="img/oculosbranco.png" alt="Artflow logo" class="logo">
-                <h1>ArtFlow</h1>
-            </div>
-            <a href="inicio"> <span class="material-symbols-outlined mobile">home</span> Início</a>
-            <a href="galeria"><span class="material-symbols-outlined">palette</span> Galeria</a>
-            <a href="suporte"><span class="material-symbols-outlined">contact_support</span> Suporte</a>
-            <a href="login" id="login"><span class="material-symbols-outlined">login</span> Login</a>
-        </nav>
-    </header>
+  <script>
+    function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    </script>
+ <header class="bg-[#111] py-4 px-6 flex justify-between items-center shadow-md">
+    <div class="flex items-center gap-3">
+        <!-- Logo substituindo o texto -->
+        <img src="img/oculosbrancov2.PNG" 
+             alt="Logo ArtFlow" 
+             class="w-32 h-auto hover:scale-105 transition-transform">
+    </div>
+    <div class="flex gap-4 text-white">
+        <a href="login.html" class="border border-teal-500 px-4 py-2 rounded-lg hover:bg-teal-500 hover:text-gray-900 transition">Login</a>
+        <a href="registro.html" class="border border-teal-500 px-4 py-2 rounded-lg hover:bg-teal-500 hover:text-gray-900 transition">Registro</a>
+    </div>
+</header>
 
     <main>
         <section class="start">
             <div class="start-text">
                 <h2>Boas-vindas ao ArtFlow</h2>
                 <p>Compartilhe suas obras e descubra talentos incríveis.</p>
-                <a href="galeria" class="galeria">Explore a Galeria</a>
+                <a href="galeria" class="border border-[#f0f8ff] px-4 py-2 rounded-lg hover:bg-[#f0f8ff] hover:text-gray-900 transition">Explore a Galeria</a>
             </div>
         </section>
 
@@ -105,7 +115,7 @@
           <div class="footer-links">
             <h3>Links Rápidos</h3>
             <ul>
-              <li><a href="inicio">Início</a></li>
+              <li><a href="#" onclick="scrollToTop(event)">Início</a></li>
               <li><a href="galeria">Galeria</a></li>
               <li><a href="suporte">Suporte</a></li>
               <li><a href="login">Login</a></li>
